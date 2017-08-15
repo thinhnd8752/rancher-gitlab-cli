@@ -36,7 +36,7 @@ def main(rancher_url, rancher_key, rancher_secret, action, debug):
 
     proto, host = rancher_url.split("://")
     api = "%s://%s:%s@%s/v1-catalog" % (proto, rancher_key, rancher_secret, host)
-    
+  
     # 1 -> Trigger template refresh
     if action=='refresh':
         try:
